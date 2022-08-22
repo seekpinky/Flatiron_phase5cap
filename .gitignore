@@ -33,6 +33,21 @@ MANIFEST
 *.manifest
 *.spec
 
+# Ignore Csvs
+*.csv
+
+# Ignore pickles
+*.pkl
+**/*.pkl
+
+# ignore data image files 
+*.png
+data/
+datasets_split/
+image_data/
+image_datasets/
+split/
+OD-WeaponDetection-master/
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
