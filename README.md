@@ -94,3 +94,17 @@ For example, there are data privacy and ethical concerns related to the usage of
 
 
 ## Repository Structure
+
+```
+├── images_presentation
+├── pdfs
+├── .gitignore
+├── EDA.ipynb
+├── Image Classification - Binary.ipynb
+└── Image Classification - Multiclass.ipynb
+└── README.md
+```
+
+
+
+
