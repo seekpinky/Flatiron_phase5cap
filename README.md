@@ -9,7 +9,7 @@
 
 ## Elevator Pitch
 
-I recently developed a machine learning tool with borrowers' background data for bankers/investors concerned about auto loan delinquencies. This classification tool allows us to identify a loan that will default 59% of the time.
+I recently developed a machine learning tool with borrowers' background data for bankers/investors who concerned about auto loan delinquencies. This classification tool allows us to identify a loan that will default 59% of the time.
 
 
 ## Business Understanding
@@ -36,23 +36,23 @@ The data set consists of 121856 total rows of data. There are 40 columns of feat
 The goal of the problem is to predict whether a borrower will default on the vehicle loan payment or not. 
 
 
-Perform an analysis on gun violence in the United States and create a machine learning model that can classify auto loan default or not. The intention is to proactively detect potentially dangerous individuals on social media and for authorities to respond appropriately.
-    
-For reference, this project implements Keras library. Keras is one of the leading high-level neural networks APIs and does a great job in the classification of images.
+#pt 1
+
+#pt 2
 
 ## Data Processing:
     
-To prepare the images for modeling, the images in each data set were reshaped, normalized, and selected for modeling into the training, validation, and test sets. All 3 steps are accounted for using the `ImageDataGenerator` package from Keras. 
+`ImageDataGenerator`  
     
-3,000 images were used in the training set, the next 1,000 images were used in the validation set, and the remaining 1,000 images were used in the test set.
+
     
 ## Modeling:
     
 The primary metric for assessing model performance was F1 score. Models will be judged mainly based on their F1Score. F1Score is the harmonic mean of Recall and Precision. However, we also considered the recall score (ratio of # of predict default to the total image class of gun images) since the context of false negative images far outweigh the significance of accuracy for the purposes of this business problem. 
     
-The modeling process consisted of an iterative approach of attempting to build upon the previous best model. Training set images were fit into each respective model with validation performed to gauge performance on the testing data. A baseline model consisting of a simple dense neural network was instantiated as a benchmark. 
+The modeling process consisted of an iterative approach of attempting to build upon the previous best model. Training set data were fit into each respective model with validation performed to gauge performance on the testing data. A baseline model consisting of a simple dummy classifier was instantiated as a benchmark. 
     
-Building off the baseline model, a number of different architectural modeling decisions were implemented and described more fully in this notebook. In general, we implemented different optimizers, introduced new layers, dropped layers, added max pooling layers, and dropout layers. 
+
 
 ## Evaluation
 
