@@ -4,7 +4,7 @@
 # Auto Loan Default Detection
 
 <p align="center">
-  <img src = "https://images.barrons.com/im-579406?width=620&size=1.5https://images.barrons.com/im-579406?width=620&size=1.5" width="500" height="320">
+  <img src = "https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_965/69b08da5f2e3573b59a08fdf9c9b5280.jpg" width="500" height="320">
 </p> 
 
 ## Elevator Pitch
