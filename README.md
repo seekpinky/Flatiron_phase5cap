@@ -9,12 +9,12 @@
 
 ## Elevator Pitch
 
-I recently developed a machine learning tool with borrowers' background data for bankers/investors who concerned about auto loan delinquencies. This classification tool allows us to identify a loan that will default 59% of the time.
+I recently developed a machine learning tool with borrowers' background data for bankers/investors who concern about auto loan delinquencies. This classification tool allows us to identify a loan that will default 59% of the time.
 
 
 ## Business Understanding
 
-Due to increased income mainly from stimulus check and supply chain shortages, demand for cars has been sky rocketing. The average auto loan balance exceeded 20,000, and consumers owed a total of 1.4 trillion on the vehicles they drive. High inflation and interest rates can increase delinquencies as auto loan delinquencies a concern as they hit highest level since 2007. <a href="https://www.cnbc.com/video/2022/05/20/auto-loan-delinquencies-come-into-concern-as-they-hit-highest-levels-since-2007-says-bankrate-coms-mcbride.html">(CNBC)</a> The lending party is at a loss when a borrower defaults on a loan. Even if the collateral is taken, the time and money spent to turn it into funds can leave the lender with a negative return.<a href="https://www.gdslink.com/credit-risk-management-process-best-practices-techniques/">(GDS)</a>
+Due to increased income mainly from stimulus check and supply chain shortages, demand for cars has been sky rocketing. The average auto loan balance exceeded $20,000, and consumers owed a total of 1.4 trillion on the vehicles they drive. High inflation and interest rates can increase delinquencies as auto loan delinquencies a concern as they hit highest level since 2007. <a href="https://www.cnbc.com/video/2022/05/20/auto-loan-delinquencies-come-into-concern-as-they-hit-highest-levels-since-2007-says-bankrate-coms-mcbride.html">(CNBC)</a> The lending party is at a loss when a borrower defaults on a loan. Even if the collateral is taken, the time and money spent to turn it into funds can leave the lender with a negative return.<a href="https://www.gdslink.com/credit-risk-management-process-best-practices-techniques/">(GDS)</a>
 
 
 
@@ -48,9 +48,10 @@ The goal of the problem is to predict whether a borrower will default on the veh
     
 ## Modeling:
     
-The primary metric for assessing model performance was F1 score. Models will be judged mainly based on their F1Score. F1Score is the harmonic mean of Recall and Precision. However, we also considered the recall score (ratio of # of predict default to the total image class of gun images) since the context of false negative images far outweigh the significance of accuracy for the purposes of this business problem. 
+The primary metric for assessing model performance was F1 score. Models will be judged mainly based on their F1 Score. F1 Score is the harmonic mean of Recall and Precision. However, we also considered the recall score (ratio of # of predict default to the total number of default) since the context of false negative default loans far outweigh the significance of accuracy for the purposes of this business problem. 
     
 The modeling process consisted of an iterative approach of attempting to build upon the previous best model. Training set data were fit into each respective model with validation performed to gauge performance on the testing data. A baseline model consisting of a simple dummy classifier was instantiated as a benchmark. 
+    
     
 
 
