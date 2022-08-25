@@ -54,9 +54,10 @@ Data cleaning
 - Missing Value
 
 Pre-Processing
+
 A 75%-25% train-test split and 5-Fold validation was implemented for the data. 
 Pipeline
-- Set a preprocessing pipeline and a modeling pipeline. SMOAT doesn't have the fit_transform function in the sklearn pipeline, so we use two different pipelines, one for preprocessing and one for modeling.    
+Set a preprocessing pipeline and a modeling pipeline. SMOAT doesn't have the fit_transform function in the sklearn pipeline, so we use two different pipelines, one for preprocessing and one for modeling.    
 
     
 ## Modeling:
@@ -78,7 +79,7 @@ The modeling process consisted of an iterative approach of attempting to build u
 
 Most of our models have an F1 score of around .2. The results are far from the perfect F1 score of 1. 
 
-Specifically, we determined our best model, the logistic regression model, compared to the other models because it has a higher recall score, a 59% recall. However, the poor performance of precision and drop the F1 score to 19%. However, even if logistic regression has a slightly lower F1 score, we still choose it to be our best model because stake holder's priority is to minimize the number of default loan. Hence, regression model is choosen.
+Specifically, we determined our best model, the logistic regression model, compared to the other models because it has a higher recall score, a 59% recall. However, the poor performance of precision and drop the F1 score to 19%. However, even if logistic regression has a slightly lower F1 score, we still choose it to be our best model because stake holder's priority is to minimize the number of default loans. Hence, the regression model is chosen.
 
 
 ![logistic_regression](https://user-images.githubusercontent.com/65572411/186773049-65598160-c9df-49aa-a1ae-f525198cca75.png)
