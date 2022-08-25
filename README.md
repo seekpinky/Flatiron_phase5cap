@@ -98,7 +98,7 @@ Feature Importance
 
 -Further examine to see if `Loan_contract_type_cl`, and `Client_Income_Type_Retired` carry more risk of default. 
 
-- Examine with payment history:This data set mainly consists of borrowers' background data. We want to investigate it further to see if the borrower's payment history pattern would change the prediction of this analysis.
+-Examine with payment history:This data set mainly consists of borrowers' background data. We want to investigate it further to see if the borrower's payment history pattern would change the prediction of this analysis.
 
 
 ## Repository Structure
