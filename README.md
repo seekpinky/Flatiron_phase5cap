@@ -61,7 +61,7 @@ Pipeline
     
 ## Modeling:
     
-The primary metric for assessing model performance was F1 score. Models will be judged mainly based on their F1 Score. F1 Score is the harmonic mean of Recall and Precision. However, we also considered the recall score (ratio of # of predict default to the total number of default) since the context of false negative default loans far outweigh the significance of accuracy for the purposes of this business problem. 
+The primary metric for assessing model performance was F1 score. F1 Score is the harmonic mean of Recall and Precision. However, we also considered the recall score (ratio of # of predict default to the total number of default) since the context of false negative default loans far outweigh the significance of accuracy for the purposes of this business problem. 
     
 The modeling process consisted of an iterative approach of attempting to build upon the previous best model. Training set data were fit into each respective model with validation performed to gauge performance on the testing data. A baseline model consisting of a simple dummy classifier was instantiated as a benchmark. 
 
@@ -78,7 +78,7 @@ The modeling process consisted of an iterative approach of attempting to build u
 
 Most of our models have an F1 score of around .2. The results are far from the perfect F1 score of 1. 
 
-Specifically, we determined our best model, the logistic regression model, compared to the other models because it has a higher recall score, a 59% recall. However, the poor performance of precision and drop the F1 score to 19%. Therefore, we select the logistic regression model compared to the other models because it has a higher recall score with a slightly lower F1 score.
+Specifically, we determined our best model, the logistic regression model, compared to the other models because it has a higher recall score, a 59% recall. However, the poor performance of precision and drop the F1 score to 19%. However, even if logistic regression has a slightly lower F1 score, we still choose it to be our best model because stake holder's priority is to minimize the number of default loan. Hence, regression model is choosen.
 
 
 ![logistic_regression](https://user-images.githubusercontent.com/65572411/186773049-65598160-c9df-49aa-a1ae-f525198cca75.png)
@@ -94,9 +94,9 @@ Feature Importance
 
 **Recommendations:**
 
--Need some insight from other banker's to have a better feature selection.
+-Need some professional insight to have a better feature selection.
 
--Further examine to see if Loan_contract_type_cl, and Client_Income_Type_Retired carry more risk of default. 
+-Further examine to see if `Loan_contract_type_cl`, and `Client_Income_Type_Retired` carry more risk of default. 
 
 - Examine with payment history:This data set mainly consists of borrowers' background data. We want to investigate it further to see if the borrower's payment history pattern would change the prediction of this analysis.
 
