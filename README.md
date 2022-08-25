@@ -26,7 +26,7 @@ Due to increased income mainly from stimulus check and supply chain shortages, d
 - <a href ="https://www.kaggle.com/datasets/saurabhbagchi/dish-network-hackathon?select=Test_Dataset.csv">(kaggle)</a>
 
 
-The data set consists of 121856 total rows of data. There are 40 columns of features, and the ['Default] is our target variable.
+The data set consists of 121856 total rows of data. There are 39 columns of features, and the `Default` is our target variable.
 
 
 
@@ -41,9 +41,16 @@ The goal of the problem is to predict whether a borrower will default on the veh
 #pt 2
 
 ## Data Processing:
-    
-`ImageDataGenerator`  
-    
+The target variable identified for this analysis, and`Default` is our target variable.
+
+Data cleaning
+- Outlier Removal    
+- Missing Value
+
+Pre-Processing
+A 75%-25% train-test split and 5-Fold validation was implemented for the data. 
+Pipeline
+- Set a preprocessing pipeline and a modeling pipeline. SMOAT doesn't have the fit_transform function in the sklearn pipeline, so we use two different pipelines, one for preprocessing and one for modeling.    
 
     
 ## Modeling:
@@ -65,13 +72,11 @@ Specifically, we determined our best model, the logistic regression model, compa
 
 
 
-**Model Value & Limitations:**
-
 
 
 **Recommendations:**
 
--Be cautious when selling potential default loans: If our stakeholder wants to get rid of the default loan by selling it to the ABS market, it comes with the risk of selling many normal loans.
+-Need some insight from other banker's to have a better feature selection.
 
 -Further examine to see if Loan_contract_type_cl, and Client_Income_Type_Retired carry more risk of default. 
 
@@ -84,9 +89,8 @@ Specifically, we determined our best model, the logistic regression model, compa
 ├── images_presentation
 ├── pdfs
 ├── .gitignore
-├── EDA.ipynb
 ├── Image Classification - Binary.ipynb
-└── Image Classification - Multiclass.ipynb
+└── Final_Project_5.ipynb
 └── README.md
 ```
 
