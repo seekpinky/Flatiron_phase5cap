@@ -39,6 +39,12 @@ The goal of the problem is to predict whether a borrower will default on the veh
 #pt 1
 
 #pt 2
+## EDA
+
+![ed_level](https://user-images.githubusercontent.com/65572411/186773080-49b3672f-3dfc-4921-8a99-cf5ed5022fb5.png)
+
+![kds_plot](https://user-images.githubusercontent.com/65572411/186773069-ea2f8c1d-65b2-4a99-bed4-397b32107aaa.png)
+
 
 ## Data Processing:
 The target variable identified for this analysis, and`Default` is our target variable.
@@ -58,8 +64,9 @@ Pipeline
 The primary metric for assessing model performance was F1 score. Models will be judged mainly based on their F1 Score. F1 Score is the harmonic mean of Recall and Precision. However, we also considered the recall score (ratio of # of predict default to the total number of default) since the context of false negative default loans far outweigh the significance of accuracy for the purposes of this business problem. 
     
 The modeling process consisted of an iterative approach of attempting to build upon the previous best model. Training set data were fit into each respective model with validation performed to gauge performance on the testing data. A baseline model consisting of a simple dummy classifier was instantiated as a benchmark. 
-    
-    ![p5_logisitc regression](https://user-images.githubusercontent.com/65572411/186772366-015dcb9d-cc5e-4951-aa3d-6e2433060476.png)
+
+
+
 
 
 
@@ -67,12 +74,22 @@ The modeling process consisted of an iterative approach of attempting to build u
 
 **Model Performance:**
 
-Most of our models have an F1 score of around .2. The results are far from the perfect F1 score of 1. Therefore, we select the logistic regression model compared to the other models because it has a higher recall score with a slightly lower F1 score. 
+![summary](https://user-images.githubusercontent.com/65572411/186773225-c32480c3-3435-4f6b-8042-0e548db49a9c.PNG)
 
-Specifically, we determined our best model, the logistic regression model, compared to the other models because it has a higher recall score, a 59% recall. However, the poor performance of precision and drop the F1 score to 19%. 
+Most of our models have an F1 score of around .2. The results are far from the perfect F1 score of 1. 
+
+Specifically, we determined our best model, the logistic regression model, compared to the other models because it has a higher recall score, a 59% recall. However, the poor performance of precision and drop the F1 score to 19%. Therefore, we select the logistic regression model compared to the other models because it has a higher recall score with a slightly lower F1 score.
+
+
+![logistic_regression](https://user-images.githubusercontent.com/65572411/186773049-65598160-c9df-49aa-a1ae-f525198cca75.png)
+
+
+![RF](https://user-images.githubusercontent.com/65572411/186773036-9569ef07-fe3c-48e7-b6cc-cfadc6329ea8.png)
 
 
 
+Feature Importance
+![wright](https://user-images.githubusercontent.com/65572411/186773163-6da465cb-209e-4757-a351-25374c52cfdd.png)
 
 
 **Recommendations:**
