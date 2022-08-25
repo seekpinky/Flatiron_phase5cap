@@ -59,7 +59,8 @@ The primary metric for assessing model performance was F1 score. Models will be 
     
 The modeling process consisted of an iterative approach of attempting to build upon the previous best model. Training set data were fit into each respective model with validation performed to gauge performance on the testing data. A baseline model consisting of a simple dummy classifier was instantiated as a benchmark. 
     
-    
+    ![p5_logisitc regression](https://user-images.githubusercontent.com/65572411/186772366-015dcb9d-cc5e-4951-aa3d-6e2433060476.png)
+
 
 
 ## Evaluation
