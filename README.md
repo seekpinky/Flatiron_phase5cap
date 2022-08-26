@@ -112,7 +112,7 @@ Two significant features for the logestic regression model were the `Loan_contra
 ├── pdfs
 ├── .gitignore
 ├── README.md
-└── Final_Project_5.ipynb
+└── Notebook_proj5.ipynb
 └── README.md
 ```
 
