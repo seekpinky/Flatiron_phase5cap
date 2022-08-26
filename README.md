@@ -54,7 +54,7 @@ Data cleaning
 
 Train-Test split and Pipeline
 
-A 75%-25% train-test split and 5-Fold validation was implemented for the data. 
+A 80%-20% train-test split and 5-Fold validation was implemented for the data. 
 
 Pipeline
 Set a preprocessing pipeline and a modeling pipeline. SMOAT doesn't have the fit_transform function in the sklearn pipeline, so we use two different pipelines, one for preprocessing and one for modeling.    
