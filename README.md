@@ -23,43 +23,42 @@ Due to increased income mainly from stimulus check and supply chain shortages, d
 
 
 **Data Sources:** 
-- <a href ="https://www.kaggle.com/datasets/saurabhbagchi/dish-network-hackathon?select=Test_Dataset.csv">(kaggle)</a>
+- Automobile Loan Default Dataset <a href ="https://www.kaggle.com/datasets/saurabhbagchi/dish-network-hackathon?select=Test_Dataset.csv">(kaggle)</a>
 
 
-The data set consists of 121856 total rows of data. There are 39 columns of features, and the `Default` is our target variable.
-
-
-
+The data set consists of 121856 total rows of data. There are 39 columns of features, and the `Default` is our target variable, with a 0 representing a normal loan and a 1 representing a defaulted loan.
 
 **The Task:** 
 
 The goal of the problem is to predict whether a borrower will default on the vehicle loan payment or not. 
 
+## Exploratory Data Analsysis.
 
-#pt 1
+We look at the distribution of several feature groups—for example, a) `Client_Education` b) `Client_Income`  and `Credit Amount`.
 
-#pt 2
-## EDA
+Higher level education level tends to have a lower default %.
 
 ![ed_level](https://user-images.githubusercontent.com/65572411/186773080-49b3672f-3dfc-4921-8a99-cf5ed5022fb5.png)
+
+
+Both default and normal groups are dense at the region of credit amount = 100000 and income = 15000, so we can't identify if default status occurs more in that region. 
 
 ![kds_plot](https://user-images.githubusercontent.com/65572411/186773069-ea2f8c1d-65b2-4a99-bed4-397b32107aaa.png)
 
 
 ## Data Processing:
-The target variable identified for this analysis, and`Default` is our target variable.
 
 Data cleaning
 - Outlier Removal    
 - Missing Value
 
-Pre-Processing
+Train-Test split and Pipeline
 
 A 75%-25% train-test split and 5-Fold validation was implemented for the data. 
+
 Pipeline
 Set a preprocessing pipeline and a modeling pipeline. SMOAT doesn't have the fit_transform function in the sklearn pipeline, so we use two different pipelines, one for preprocessing and one for modeling.    
 
-    
 ## Modeling:
     
 The primary metric for assessing model performance was F1 score. F1 Score is the harmonic mean of Recall and Precision. However, we also considered the recall score (ratio of # of predict default to the total number of default) since the context of false negative default loans far outweigh the significance of accuracy for the purposes of this business problem. 
@@ -86,29 +85,33 @@ Specifically, we determined our best model, the logistic regression model, compa
 
 
 ![RF](https://user-images.githubusercontent.com/65572411/186773036-9569ef07-fe3c-48e7-b6cc-cfadc6329ea8.png)
+## Feature Importance
+
+Two significant features for the logestic regression model were the `Loan_contract_type_cl` and `Client_Income_Type_Retired` variables. The cash loan type is different than the typical auto loan type as the borrower receives cash while the retiree doesn't have a regular income. We may want to see if they have additional risk for these two variables.
 
 
-
-Feature Importance
 ![wright](https://user-images.githubusercontent.com/65572411/186773163-6da465cb-209e-4757-a351-25374c52cfdd.png)
 
 
-**Recommendations:**
+## Recommendations
 
--Need some professional insight to have a better feature selection.
+- Professional Insight: We would appreciate some professional insight to better feature selection and improve our model performance.
 
--Further examine to see if `Loan_contract_type_cl`, and `Client_Income_Type_Retired` carry more risk of default. 
+- Further investigation on loan type: We should examine to see if `Loan_contract_type_cl` and `Client_Income_Type_Retired` carry more risk of default. 
 
--Examine with payment history:This data set mainly consists of borrowers' background data. We want to investigate it further to see if the borrower's payment history pattern would change the prediction of this analysis.
+- Accuracy is still important: The model's accuracy is still a vital metric, even if we focus on the recall and precision score. For example, the logistic regression model would be functional if it didn't produce so many false positive results and predicted the true negative accurately. Then, we would have a higher precision score and F1 score.
+ 
+
+- Examine payment history: This data set mainly consists of borrowers' background data. We want to investigate it further to see if the borrower's payment history pattern would change the prediction of this analysis. 
 
 
 ## Repository Structure
 
 ```
-├── images_presentation
+├── data
 ├── pdfs
 ├── .gitignore
-├── Image Classification - Binary.ipynb
+├── README.md
 └── Final_Project_5.ipynb
 └── README.md
 ```
